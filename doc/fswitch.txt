@@ -397,19 +397,13 @@ Consider that next time you want to do such a silly thing.
 
 For *.h files:
 >
-    let b:fswitchdst  = 'c,cpp'
+    let b:fswitchdst  = 'c,cc,cpp,cxx,m'
     let b:fswitchlocs = 'reg:/include/src/,reg:/include.*/src/,../src'
 <
 
-For *.hpp files:
+For *.hh, *.hpp, *.hxx files:
 >
-    let b:fswitchdst  = 'cpp'
-    let b:fswitchlocs = 'reg:/include/src/,reg:/include.*/src/,../src'
-<
-
-For *.hxx files:
->
-    let b:fswitchdst  = 'cxx'
+    let b:fswitchdst  = 'cc,cpp,cxx'
     let b:fswitchlocs = 'reg:/include/src/,reg:/include.*/src/,../src'
 <
 
@@ -425,21 +419,21 @@ For *.c
     let b:fswitchlocs = 'reg:/src/include/,reg:|src|include/**|,../include'
 <
 
-For *.cpp
+For *.cc, *.cpp, *.cxx
 >
-    let b:fswitchdst  = 'hpp,h'
-    let b:fswitchlocs = 'reg:/src/include/,reg:|src|include/**|,../include'
-<
-
-For *.cxx
->
-    let b:fswitchdst  = 'hxx'
+    let b:fswitchdst  = 'h,hh,hpp,hxx'
     let b:fswitchlocs = 'reg:/src/include/,reg:|src|include/**|,../include'
 <
 
 For *.C
 >
     let b:fswitchdst  = 'H'
+    let b:fswitchlocs = 'reg:/src/include/,reg:|src|include/**|,../include'
+<
+
+For *.m
+>
+    let b:fswitchdst  = 'h'
     let b:fswitchlocs = 'reg:/src/include/,reg:|src|include/**|,../include'
 <
 
